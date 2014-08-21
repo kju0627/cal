@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.StringTokenizer;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.*;
 import android.database.Cursor;
@@ -51,7 +52,7 @@ import android.widget.Toast;
  * @version v 1.0 2011. 8. 26.
  */
 
-public class CreateEvent extends Activity implements OnClickListener{
+@SuppressLint("NewApi") public class CreateEvent extends Activity implements OnClickListener{
 
 	String title;
 	String location;
@@ -206,7 +207,7 @@ public class CreateEvent extends Activity implements OnClickListener{
 			
 				Date n_date_stime = new Date(datePicker1.getYear()-1900, datePicker1.getMonth(), datePicker1.getDayOfMonth(), timePicker1.getCurrentHour(), timePicker1.getCurrentMinute());
 				Date n_date_etime = new Date(datePicker2.getYear()-1900, datePicker2.getMonth(), datePicker2.getDayOfMonth(), timePicker2.getCurrentHour(), timePicker2.getCurrentMinute());
-				addToCalendar(getApplicationContext(), n_title, n_date_stime, n_date_etime, n_location);
+				CalendarManager.addToCalendar(getApplicationContext(), n_title, n_date_stime, n_date_etime, n_location);
 			}
 		});
 	}
@@ -380,7 +381,7 @@ public class CreateEvent extends Activity implements OnClickListener{
 		cursor.close();		 
 	}*/
 	
-	
+	/*
 	private void addToCalendar(Context ctx, final String title, final Date dtstart, final Date dtend, final String location) {
 
 			String sTime = 	""+	dtstart.getTime();
@@ -500,6 +501,8 @@ public class CreateEvent extends Activity implements OnClickListener{
 	    	 
 	     }
 	}
+	*/
+	
 	
 	/**
  	 * 태블릿 여부 확인
