@@ -5,10 +5,16 @@ import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.jackson.JacksonFactory;
 import com.google.api.services.calendar.Calendar;
 import com.google.api.services.calendar.model.*;
+import com.google.gdata.data.dublincore.Date;
 
 public class CalendarManager {
-
-	public static void addToCalendar(Context ctx, final String title, final Date dtstart, final Date dtend, final String location) {
+	public static void removeFromCalendar() {
+	}
+	
+	public static void ChangeFromCalendar() {
+	}
+	//https://developers.google.com/api-client-library/java/apis/calendar/v3
+	public static void addToCalendar(final String title, final Date dtstart, final Date dtend, final String location) {
 
 		String sTime = "" + dtstart.getTime();
 		String eTime = "" + dtend.getTime();
