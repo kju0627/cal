@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:background="#ffffff">
+  
+    <ScrollView
+        android:id="@+id/extract_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    
+    <LinearLayout android:layout_height="wrap_content" android:id="@+id/linearLayoutTop" android:layout_width="fill_parent" android:layout_alignParentTop="true" android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Title will be here"
+            android:textColor="#ef6131"
+            android:textSize="15sp"
+            android:textStyle="bold" >
+</TextView>
+	    <View android:background="#333333" android:layout_width="fill_parent" android:layout_height="1sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCenter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayoutBottom"
+        android:layout_below="@+id/linearLayoutTop"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCenterLeft"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="10dp"
+            android:scrollbarAlwaysDrawVerticalTrack="true" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Original Text"
+                android:textColor="#0286bf"
+                android:textSize="15sp"
+                android:textStyle="bold" >
+</TextView>
+            <ScrollView android:visibility="visible" android:scrollbars="vertical" android:id="@+id/scrollView1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollbarStyle="insideOverlay">
+                <LinearLayout android:id="@+id/linearLayoutScroll" android:layout_height="match_parent" android:layout_width="match_parent" android:scrollbars="vertical">
+
+                    <TextView
+                        android:id="@+id/tvBody"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="15sp" >
+</TextView>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="fill_parent"
+            android:layout_height="1sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#333333" >
+
+</View>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCenterRight"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvTimeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="Extracted Time"
+                        android:textColor="#0286bf"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutSender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/textView0"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="sender : "
+                            android:textColor="#75c3e2"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvSender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutStartTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="startTime : "
+                            android:textColor="#75c3e2"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvStartTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutEndTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="endTime : "
+                            android:textColor="#75c3e2"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvEndTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="type : "
+                            android:textColor="#75c3e2"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvLocationTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="Extracted Location"
+                        android:textColor="#0286bf"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tvIHA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnEvent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="Create Event"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout android:layout_alignParentBottom="true" android:layout_width="fill_parent" android:id="@+id/linearLayoutBottom" android:orientation="vertical" android:layout_height="wrap_content">
+        <View android:background="#333333" android:layout_width="fill_parent" android:layout_height="1sp" />
+
+	    <com.google.android.maps.MapView
+	        android:id="@+id/mapview"
+	        android:layout_width="fill_parent"
+	        android:layout_height="243dp"
+	        android:apiKey="0AoJ67UDoBUtdc_C4zpYQ1YdFXEQ28s3itKujNQ"
+	        android:clickable="true" />
+		
+    </LinearLayout>    
+    
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

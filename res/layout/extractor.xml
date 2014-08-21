@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:background="#ffffff">
+    <LinearLayout android:layout_height="wrap_content" android:id="@+id/linearLayoutTop" android:layout_width="fill_parent" android:layout_alignParentTop="true" android:orientation="vertical">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tvTitle" android:text="Title will be here" android:padding="10dp" android:textStyle="bold" android:textColor="#ef6131" android:textSize="14pt"></TextView>
+	    <View android:background="#333333" android:layout_width="fill_parent" android:layout_height="1sp" />
+    </LinearLayout>
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/linearLayoutCenter" android:layout_below="@+id/linearLayoutTop" android:layout_above="@+id/linearLayoutBottom" android:padding="10dp" android:orientation="horizontal">
+        <LinearLayout android:id="@+id/linearLayoutCenterLeft" android:orientation="vertical" android:layout_height="fill_parent" android:paddingRight="10dp" android:scrollbarAlwaysDrawVerticalTrack="true" android:layout_width="400dp">
+            <TextView android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Original Text" android:textStyle="bold" android:layout_marginBottom="5dp" android:textColor="#0286bf" android:textSize="14pt"></TextView>
+            <ScrollView android:visibility="visible" android:scrollbars="vertical" android:id="@+id/scrollView1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollbarStyle="insideOverlay">
+                <LinearLayout android:id="@+id/linearLayoutScroll" android:layout_height="match_parent" android:layout_width="match_parent" android:scrollbars="vertical">
+                    <TextView android:id="@+id/tvBody" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#000000" android:textSize="14pt"></TextView>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <View android:id="@+id/view1" android:background="#333333" android:layout_width="1sp" android:layout_height="fill_parent"></View>
+        <LinearLayout android:id="@+id/linearLayoutCenterRight" android:orientation="vertical" android:paddingLeft="10dp" android:layout_height="fill_parent" android:layout_width="fill_parent">
+            <ScrollView android:id="@+id/scrollView2" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout1" android:layout_height="match_parent" android:orientation="vertical">
+                    <TextView android:layout_marginBottom="5dp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tvTimeTitle" android:text="Extracted Time" android:textColor="#0286bf" android:textSize="14pt"></TextView>
+                    <LinearLayout android:layout_marginBottom="5dp" android:layout_width="match_parent" android:orientation="vertical" android:layout_height="wrap_content" android:id="@+id/linearLayoutSender">
+                        <TextView android:textStyle="bold" android:layout_height="wrap_content" android:id="@+id/textView0" android:text="sender : " android:textColor="#75c3e2" android:textSize="14pt" android:layout_width="200dp"></TextView>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tvSender" android:textColor="#000000" android:textSize="14pt"></TextView>
+                    </LinearLayout>
+                    <LinearLayout android:layout_marginBottom="5dp" android:layout_width="match_parent" android:orientation="vertical" android:layout_height="wrap_content" android:id="@+id/linearLayoutStartTime">
+                        <TextView android:textStyle="bold" android:layout_height="wrap_content" android:id="@+id/textView1" android:text="startTime : " android:textColor="#75c3e2" android:textSize="14pt" android:layout_width="200dp"></TextView>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tvStartTime" android:textColor="#000000" android:textSize="14pt"></TextView>
+                    </LinearLayout>
+                    <LinearLayout android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:orientation="vertical" android:layout_height="match_parent" android:id="@+id/linearLayoutEndTime">
+                        <TextView android:textStyle="bold" android:layout_height="wrap_content" android:id="@+id/textView3" android:text="endTime : " android:textColor="#75c3e2" android:textSize="14pt" android:layout_width="200dp"></TextView>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tvEndTime" android:textColor="#000000" android:textSize="14pt"></TextView>
+                    </LinearLayout>
+                    <LinearLayout android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:orientation="vertical" android:layout_height="match_parent" android:id="@+id/linearLayoutType">
+                        <TextView android:textStyle="bold" android:layout_height="wrap_content" android:id="@+id/textView4" android:text="type : " android:textColor="#75c3e2" android:textSize="14pt" android:layout_width="200dp"></TextView>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tvType" android:textColor="#000000" android:textSize="14pt"></TextView>
+                    </LinearLayout>
+                    <TextView android:layout_marginBottom="5dp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tvLocationTitle" android:text="Extracted Location" android:textColor="#0286bf" android:textSize="14pt"></TextView>
+                    <LinearLayout android:layout_width="match_parent" android:orientation="vertical" android:layout_height="wrap_content" android:id="@+id/linearLayoutLocation">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tvIHA" android:textColor="#000000" android:textSize="14pt"></TextView>
+                    </LinearLayout>
+                    <Button android:layout_width="fill_parent" android:padding="0dp" android:text="Create Event" android:layout_height="50dp" android:id="@+id/btnEvent" android:visibility="visible" android:textSize="14pt"></Button>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_alignParentBottom="true" android:layout_width="fill_parent" android:id="@+id/linearLayoutBottom" android:orientation="vertical" android:layout_height="wrap_content">
+        <View android:background="#333333" android:layout_width="fill_parent" android:layout_height="1sp" />
+
+	    <com.google.android.maps.MapView
+	        android:id="@+id/mapview"
+	        android:layout_width="fill_parent"
+	        android:layout_height="243dp"
+	        android:apiKey="0AoJ67UDoBUtdc_C4zpYQ1YdFXEQ28s3itKujNQ"
+	        android:clickable="true" />
+		
+    </LinearLayout>    
+</RelativeLayout>

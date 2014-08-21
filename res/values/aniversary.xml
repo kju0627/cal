@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+	<string-array name="anniversary">
+ 	    <item>결혼</item>
+	    <item>생일</item> 
+	    <item>제사</item>
+	    <item>명절</item>
+	    <item>법정공휴일</item>
+	    <item>국경일</item>
+	    <item>행사</item>
+	</string-array>
+</resources>
