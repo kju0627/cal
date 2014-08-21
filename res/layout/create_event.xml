@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:background="#ffffff">
+    <TableLayout android:id="@+id/tableLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TableRow android:id="@+id/tableRow4" android:layout_height="wrap_content" android:layout_width="wrap_content">
+            <TextView android:id="@+id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Title" android:textSize="14pt" android:textColor="#000000"></TextView>
+            <LinearLayout android:id="@+id/linearLayout4" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <EditText android:layout_span="2"  android:layout_height="wrap_content" android:id="@+id/editTextTitle" android:layout_width="fill_parent" android:textSize="14pt"></EditText>
+            </LinearLayout>
+        </TableRow>
+        <TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Start Time" android:layout_gravity="center_vertical|center_horizontal" android:textSize="14pt" android:textColor="#000000"></TextView>
+            <LinearLayout android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:layout_width="fill_parent">
+                <DatePicker android:layout_width="wrap_content" android:id="@+id/datePicker1" android:layout_height="wrap_content"></DatePicker>
+                <TimePicker android:layout_width="wrap_content" android:id="@+id/timePicker1" android:layout_height="wrap_content"></TimePicker>
+            </LinearLayout>
+        </TableRow>
+        <TableRow android:id="@+id/tableRow2" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="End Time" android:layout_gravity="center_vertical|center_horizontal" android:textSize="14pt" android:textColor="#000000"></TextView>
+            <LinearLayout android:id="@+id/linearLayout2" android:layout_height="wrap_content" android:layout_width="fill_parent">
+                <DatePicker android:layout_width="wrap_content" android:id="@+id/datePicker2" android:layout_height="wrap_content"></DatePicker>
+                <TimePicker android:layout_width="wrap_content" android:id="@+id/timePicker2" android:layout_height="wrap_content"></TimePicker>
+            </LinearLayout>
+        </TableRow>
+        <TableRow android:id="@+id/tableRow3" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Location" android:textSize="14pt" android:textColor="#000000"></TextView>
+            <LinearLayout android:id="@+id/linearLayout3" android:layout_height="wrap_content" android:layout_width="fill_parent">
+                <EditText android:layout_height="wrap_content" android:layout_span="2" android:layout_width="fill_parent" android:id="@+id/editTextLocation" android:textSize="14pt"></EditText>
+            </LinearLayout>
+        </TableRow>
+        
+        <TableRow android:id="@+id/tableRow5" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@+id/textView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Remind" android:textSize="14pt" android:textColor="#000000"></TextView>
+            <LinearLayout android:id="@+id/linearLayout5" android:layout_height="wrap_content" android:layout_width="fill_parent">
+                <Spinner android:layout_width="0dp" android:id="@+id/selReminderbox1" android:layout_height="wrap_content" android:layout_weight="1"></Spinner>
+                <EditText android:layout_width="0dp" android:id="@+id/txtReminder1" android:layout_height="wrap_content" android:layout_weight="1" android:singleLine="true" android:visibility="gone"></EditText>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="반복" android:textColor="#000000" android:textSize="10pt" android:layout_marginLeft="10dp" android:layout_gravity="center_vertical"/>
+                <CheckBox android:layout_width="0dp" android:id="@+id/chkRemonder" android:layout_height="wrap_content" android:layout_weight="1" android:layout_gravity="center_vertical"></CheckBox>
+                <EditText android:layout_width="0dp" android:id="@+id/anyTextbox" android:layout_height="wrap_content" android:layout_weight="1" android:singleLine="true" android:visibility="gone"></EditText>
+                <Spinner android:layout_width="0dp" android:id="@+id/selAnybox" android:layout_height="wrap_content" android:layout_weight="1"></Spinner>
+            </LinearLayout>
+        </TableRow>
+        
+        
+        
+        
+        
+        
+        
+        <Button android:layout_height="wrap_content" android:text="Create Event to Google Calendar" android:layout_width="fill_parent" android:id="@+id/btnCreateEvent" android:textSize="14pt"></Button>
+    </TableLayout>
+</LinearLayout>
